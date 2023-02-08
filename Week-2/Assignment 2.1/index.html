@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
-    <title>Document</title>
+    <title>My blog</title>
   </head>
   <body>
     <header>Stock Market Crash 2008</header>
@@ -41,7 +41,7 @@
             </p>
           </div>
 
-          <div class="para-2">
+          <div id="para-2">
             <h3>October 2008</h3>
             <p>
               The Fed tried to prop up banks by lending $540 billion to money
@@ -55,5 +55,62 @@
         </div>
       </section>
     </div>
+    <section id="info-form">
+      <form>
+        <div>
+          <span>Title</span>
+          <input type="radio" name="title" value="Mr" />
+          <label for="Mr">Mr</label>
+          <input type="radio" name="title" value="Mrs" />
+          <label for="Mrs">Mrs</label>
+          <input type="radio" name="title" value="Miss" />
+          <label for="Miss">Miss</label>
+        </div>
+        <div>
+          <label for="first-name">First Name</label>
+          <input type="text" name="first-name" id="first-name" />
+        </div>
+        <div>
+          <label for="last-name">Last Name</label>
+          <input type="text" name="last-name" id="last-name" />
+        </div>
+        <div>
+          <label for="email">Email</label>
+          <input type="email" />
+        </div>
+        <div>
+          <label for="phone-number">Phone Number</label>
+          <input type="tel" name="phone-number" id="phone-number" pattern="[0-9]{10}" />
+        </div>
+        <div>
+          <label for="password">Password</label>
+          <input type="password" name="password" id="password" />
+        </div>
+        <div>
+          <label for="confirm-password">Confirm your Password</label>
+          <input
+            type="password"
+            name="confirm-password"
+            id="confirm-password"
+          />
+        </div>
+        <div>
+          <label for="country">Country</label>
+          <select name="country" id="country">
+            <option value="Canada">Canada</option>
+            <option value="India">India</option>
+          </select>
+        </div>
+        <div>
+          <input type="checkbox" name="terms" id="terms" />
+          <label for="terms">
+            I agree to the <a href="#">terms and conditions</a></label
+          >
+        </div>
+        <div>
+          <input type="button" value="Sign up" />
+        </div>
+      </form>
+    </section>
   </body>
 </html>
