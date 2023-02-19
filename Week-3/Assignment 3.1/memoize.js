@@ -17,16 +17,16 @@ console.timeEnd("test_2");
 
 // Memoize function
 function memoize(func) {
-  const memory = new Map();
-
-  return function (...args) {
-    const key = JSON.stringify([...args]);
-
-    if (memory.has(key)) {
-      return memory.get(key);
-    }
-    const result = func(...args);
-    memory.set(key, result);
-    return result;
-  };
-}
+    const memory = new Map();
+  
+    return function (...args) {
+      const key = JSON.stringify([...args]);
+  
+      if (memory.has(key)) {
+        return memory.get(key);
+      }
+      const result = func(...args);
+      memory.set(key, result);
+      return result;
+    };
+  }
