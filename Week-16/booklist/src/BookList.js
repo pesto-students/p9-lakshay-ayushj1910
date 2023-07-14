@@ -1,4 +1,5 @@
 import React from "react";
+import Book from "./Book";
 
 const books = [
   { title: "Book 1", author: "Author 1", year: 2020 },
@@ -11,9 +12,7 @@ function BookList() {
     <div>
       {books.map((book) => {
         return (
-          <li key={book.title}>
-            Title:{book.title}, Author:{book.author}, Year:{book.year}
-          </li>
+          <Book title={book.title} author={book.author} year={book.year} />
         );
       })}
     </div>
