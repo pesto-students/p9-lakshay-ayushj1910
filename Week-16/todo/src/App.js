@@ -11,26 +11,18 @@ function App() {
       })
     );
   };
-  const [todos, setTodos] = useState([
-    {
-      sno: 1,
-      title: "some work 1",
-      desc: "desc 1",
-    },
-    {
-      sno: 2,
-      title: "some work 2",
-      desc: "desc 2",
-    },
-    {
-      sno: 3,
-      title: "some work 3",
-      desc: "desc 3",
-    },
-  ]);
+  const addTodo = (title, desc) => {
+    const todo = {
+      sno: todos.length + 1,
+      title: title,
+      desc: desc,
+    };
+    setTodos([...todos, todo]);
+  };
+  const [todos, setTodos] = useState([]);
   return (
     <div className="App">
-      <Addtodo />
+      <Addtodo addTodo={addTodo} />
       <TodoList todos={todos} onDelete={onDelete} />
     </div>
   );
